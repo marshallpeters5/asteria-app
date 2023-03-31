@@ -1,22 +1,20 @@
-var key = '0qMWKgY4Hc74rbHIH8PQajMGaFPK4oztpyJCkqS4';
-var selectedDate = document.getElementById('input-date')
-var url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=' + selectedDate + '&page=1&api_key='
+var url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?page=1&earth_date='+ selectedDate + '&api_key=0qMWKgY4Hc74rbHIH8PQajMGaFPK4oztpyJCkqS4'
+var selectedDateEl = document.getElementById('input-date')
+var selectedDate = dayjs(selectedDateEl.value).format('YYYY/MM/DD')
+var submitDate = document.getElementById('submit')
 
-function getApi(event){
-fetch(url + key, {
-    earth_date: selectedDate,
-})
-    .then(function (response) {
-        return response.json()
+function getApi(event) {
+    event.preventDefault();
+    fetch(url, {
+//        earth_date: selectedDate,
+//        page: 1,
     })
-    .then(function (data) {
-        console.log(data)
-    });
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            console.log(data)
+        });
 }
 
-function submitDateEventListener(){
-    const submitDate = document.getElementById('submit')
-    submitDate.addEventListener("submit", getApi)
-    console.log(submitDate)
-}
-console.log(earth_date)
+submitDate.addEventListener("submit", getApi)
