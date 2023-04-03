@@ -63,8 +63,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-function openImageModule(){
-
-}
-
 document.getElementById("submit").addEventListener("click", getApi)
