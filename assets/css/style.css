@@ -48,3 +48,13 @@ body {
   align-items: center;
   margin: auto;
 }
+
+#main-description {
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.349) ;
+  padding: 10px 20px 10px 20px;
+}
+
+#get-started {
+  background-color: rgba(136, 67, 3, 0.808);
+}
