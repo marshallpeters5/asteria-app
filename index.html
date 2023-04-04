@@ -50,61 +50,45 @@
   </div>
 </section>
 
-<div class="field is-horizontal">
+<div class id="field-is-horizontal">
     <div class="field-label is-normal">
-      <label class="label">Let's us know what you think !</label>
+      <label class="label">Please complete all information below to become a member:</label>
     </div>
     <div class="field-body">
       <div class="field is-narrow">
         <div class="control">
-          <div class="select is-fullwidth">
-            <select>
-              <option>what did you like about webpage</option>
-              <option>The images</option>
-              <option>The information</option>
-            </select>
-          </div>
+          
         </div>
       </div>
     </div>
   </div>
-  <div class="field is-horizontal">
-    <div class="field-label">
-      <label class="label">Already a member?</label>
-    </div>
-    <div class="field-body">
-      <div class="field is-narrow">
-        <div class="control">
-          <label class="radio">
-            <input type="radio" name="member">
-            Yes
-          </label>
-          <label class="radio">
-            <input type="radio" name="member">
-            No
-          </label>
-        </div>
-      </div>
+
+    
+    
     </div>
   </div>
+  
   <div class="field is-horizontal">
-    <div class="field-label is-normal">
-      <label class="label">Subject</label>
+    <div class="field">
+    <label class="label">Name</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="e.g Alex Smith">
     </div>
-    <div class="field-body">
-      <div class="field">
-        <div class="control">
-          <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
-        </div>
-        <p class="help is-danger">
-          This field is required
-        </p>
+  </div>
+  
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control">
+      <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+    </div>
+  
+       
       </div>
     </div>
   </div>
   <div class="field is-horizontal">
     <div class="field-label is-normal">
-      <label class="label">Question</label>
+      <label class="label">Comments</label>
     </div>
     <div class="field-body">
       <div class="field">
@@ -130,6 +114,7 @@
   </div>
   <input type="date" name="selected-day" id="input-date">
   <button type="submit" id="submit">Submit</button>
+  
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="./assets/javascript/script.js"></script>
 </body>
