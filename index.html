@@ -58,7 +58,7 @@
     </div>
   </section>
 
-  <div class="field is-horizontal">
+  <!--<div class="field is-horizontal">
     <div class="field-label is-normal">
       <label class="label">Let's us know what you think !</label>
     </div>
@@ -124,7 +124,6 @@
   </div>
   <div class="field is-horizontal">
     <div class="field-label">
-      <!-- Left empty for spacing -->
     </div>
     <div class="field-body">
       <div class="field">
@@ -135,7 +134,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 
   <div class="modal" id="modal-js-example">
     <div class="modal-background"></div>
@@ -159,7 +158,11 @@
   <div class="modal img-modal" id="image-modal">
     <div class="modal-background"></div>
     <div class="modal-content">
-      <p class="image is-4by3">
+      <div class="is-horizontal" id="controls">
+        <button id="prev" class="button is-danger">◀ Prev</button>
+        <button id="next" class="button is-danger">Next ▶</button>
+        </div>
+      <p class="image is-fullwidth">
         <img id="img-modal-content" src="" alt="Rover photo here">
       </p>
     </div>

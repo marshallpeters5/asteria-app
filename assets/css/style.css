@@ -58,3 +58,15 @@ body {
 #get-started {
   background-color: rgba(136, 67, 3, 0.808);
 }
+#controls{
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#prev{
+  background-color: rgba(136, 67, 3, 0.808);
+}
+#next{
+  background-color: rgba(136, 67, 3, 0.808);
+}
