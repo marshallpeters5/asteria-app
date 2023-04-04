@@ -15,12 +15,10 @@ function getApi(event) {
             var totalImages = data.photos.length
             var imageBankL = []
             for (i = 0; i < totalImages; i++) {
-                imageBankL.push(data.photos[i].img_src)
-                window.imageBankG = imageBankL
+                imageBankL.push(data.photos[i].img_src);
+                window.imageBankG = imageBankL;
             }
-            var xL = 0
-            window.xG = xL
-            var imgUrl = data.photos[xL].img_src
+            var imgUrl = data.photos[0].img_src;
             openImageModal(imgUrl);
         })
         .catch(function () {
@@ -28,20 +26,31 @@ function getApi(event) {
 }
 
 var imageBankG
-var xG
+var xG = 0
 
 nextBtn.addEventListener('click', function () {
-    document.getElementById('img-modal-content').src = imageBankG[xG++];
+    if (xG == imageBankG.length) {
+        alert('This is the last image')
+    }
+    else {
+        document.getElementById('img-modal-content').src = imageBankG[xG+=1];
+    }
 })
 
 prevBtn.addEventListener('click', function () {
-    document.getElementById('img-modal-content').src = imageBankG[xG--];
+    if (xG == 0) {
+        alert('No more previous images')
+    }
+    else {
+        document.getElementById('img-modal-content').src = imageBankG[xG-=1];
+    }
 })
 
 
 function openImageModal(img) {
     document.getElementById('img-modal-content').src = img
 }
+
 //Launch Modal
 
 document.addEventListener('DOMContentLoaded', () => {
