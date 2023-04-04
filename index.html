@@ -6,6 +6,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alkatra&family=Cinzel&family=Crimson+Text&family=Merriweather:wght@300&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -59,7 +64,7 @@
     </div>
   </section>
 
-  <div class="field is-horizontal">
+  <!--<div class="field is-horizontal">
     <div class="field-label is-normal">
       <label class="label">Please complete all information below to become a member:</label>
     </div>
@@ -109,7 +114,6 @@
   </div>
   <div class="field is-horizontal">
     <div class="field-label">
-      <!-- Left empty for spacing -->
     </div>
     <div class="field-body">
       <div class="field">
@@ -120,7 +124,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 
   <div class="modal" id="modal-js-example">
     <div class="modal-background"></div>
@@ -134,17 +138,22 @@
         <input type="date" name="selected-day" id="input-date">
       </section>
       <footer class="modal-card-foot">
-        <button class="button is-success js-modal-trigger" type="submit" id="submit" data-target="image-modal">Save Changes</button>
+        <button class="button is-success js-modal-trigger" type="submit" id="submit" data-target="image-modal">Save
+          Changes</button>
         <button class="button">Cancel</button>
       </footer>
     </div>
   </div>
 
-  <!-- Image Modal --> 
+  <!-- Image Modal -->
   <div class="modal img-modal" id="image-modal">
     <div class="modal-background"></div>
     <div class="modal-content">
-      <p class="image is-4by3">
+      <div class="is-horizontal" id="controls">
+        <button id="prev" class="button is-danger">◀ Prev</button>
+        <button id="next" class="button is-danger">Next ▶</button>
+      </div>
+      <p class="image is-fullwidth">
         <img id="img-modal-content" src="" alt="Rover photo here">
       </p>
     </div>

@@ -1,3 +1,6 @@
+*{
+  font-family: 'Merriweather', Helvetica, sans-serif;
+}
 .button {
   background-color: #3273dc;
   color: #fff;
@@ -23,6 +26,7 @@
 }
 
 .navbar-item {
+  padding-top: 50px;
   font-size: 50px;
   color: rgb(255, 255, 255);
 }
@@ -30,6 +34,7 @@
 .subtitle {
   margin: 0 20% 0 20%;
   font-size: 20px;
+  line-height: 1.5;
 }
 
 body {
@@ -40,6 +45,8 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  padding-top: 20px;
+
 }
 
 .centerSubmit {
@@ -56,5 +63,18 @@ body {
 }
 
 #get-started {
+  background-color: rgba(136, 67, 3, 0.808);
+  border: 1px solid #222222;
+}
+#controls{
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#prev{
+  background-color: rgba(136, 67, 3, 0.808);
+}
+#next{
   background-color: rgba(136, 67, 3, 0.808);
 }
