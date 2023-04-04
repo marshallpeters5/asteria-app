@@ -1,22 +1,45 @@
 var selectedDateEl = document.querySelector('#input-date')
 var selectedDate = dayjs(selectedDateEl.value).format('YYYY/MM/DD')
 var apiKey = '0qMWKgY4Hc74rbHIH8PQajMGaFPK4oztpyJCkqS4';
+var nextBtn = document.getElementById('next');
+var prevBtn = document.getElementById('prev');
+
 
 
 function getApi(event) {
     event.preventDefault();
     var queryUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?page=1&earth_date=' + selectedDateEl.value + '&api_key=' + `${apiKey}`;
     fetch(queryUrl)
-        .then(function (response) {return response.json()})
-        .then(function (data) {
-            var imgUrl = data.photos[0].img_src
+        .then(function (response) { return response.json() })
+        .then(async function (data) {
+            var totalImages = data.photos.length
+            var imageBankL = []
+            for (i = 0; i < totalImages; i++) {
+                imageBankL.push(data.photos[i].img_src)
+                window.imageBankG = imageBankL
+            }
+            var xL = 0
+            window.xG = xL
+            var imgUrl = data.photos[xL].img_src
             openImageModal(imgUrl);
         })
         .catch(function () {
         });
 }
 
-function openImageModal(img){
+var imageBankG
+var xG
+
+nextBtn.addEventListener('click', function () {
+    document.getElementById('img-modal-content').src = imageBankG[xG++];
+})
+
+prevBtn.addEventListener('click', function () {
+    document.getElementById('img-modal-content').src = imageBankG[xG--];
+})
+
+
+function openImageModal(img) {
     document.getElementById('img-modal-content').src = img
 }
 //Launch Modal

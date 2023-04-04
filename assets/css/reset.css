@@ -72,3 +72,11 @@ select {
   }
 }
 
+* {
+  color: white;
+}
+
+.label {
+  color: white;
+  font-weight: normal;
+}
