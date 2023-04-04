@@ -125,7 +125,7 @@
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">What would you like us to search for? </p>
+        <p class="modal-card-title">Which date would you like to view rover imagery for?</p>
         <button class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
@@ -133,18 +133,18 @@
         <input type="date" name="selected-day" id="input-date">
       </section>
       <footer class="modal-card-foot">
-        <button class="button is-success js-modal-trigger" type="submit" id="submit" data-target="image-modal">Save changes</button>
+        <button class="button is-success js-modal-trigger" type="submit" id="submit" data-target="image-modal">Save Changes</button>
         <button class="button">Cancel</button>
       </footer>
     </div>
   </div>
 
   <!-- Image Modal --> 
-  <div class="modal" id="image-modal">
+  <div class="modal img-modal" id="image-modal">
     <div class="modal-background"></div>
     <div class="modal-content">
       <p class="image is-4by3">
-        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+        <img id="img-modal-content" src="" alt="Rover photo here">
       </p>
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
