@@ -26,15 +26,15 @@
 }
 
 .navbar-item {
-  padding-top: 50px;
-  font-size: 50px;
+  padding-top: 70px;
+  font-size: 75px;
   color: rgb(255, 255, 255);
 }
 
 .subtitle {
   margin: 0 20% 0 20%;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 body {
@@ -45,8 +45,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  padding-top: 20px;
-
+  padding-top: 50px;
 }
 
 .centerSubmit {
@@ -70,7 +69,7 @@ body {
   margin: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 #prev{
   background-color: rgba(136, 67, 3, 0.808);
