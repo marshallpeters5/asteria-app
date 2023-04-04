@@ -3,19 +3,20 @@ var selectedDate = dayjs(selectedDateEl.value).format('YYYY/MM/DD')
 
 function getApi(event) {
     event.preventDefault();
-    var queryUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?page=1&earth_date=' + selectedDateEl.value + '&api_key=0qMWKgY4Hc74rbHIH8PQajMGaFPK4oztpyJCkqS4'
+    var queryUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?page=1&earth_date=' + selectedDateEl.value + '&api_key=0qMWKgY4Hc74rbHIH8PQajMGaFPK4oztpyJCkqS4';
     fetch(queryUrl)
-        .then(function (response) {
-            return response.json()
-        })
+        .then(function (response) {return response.json()})
         .then(function (data) {
-            console.log(data)
+            var imgUrl = data.photos[0].img_src
+            openImageModal(imgUrl);
+        })
+        .catch(function () {
         });
 }
 
-document.getElementById("submit").addEventListener("click", getApi)
-
-
+function openImageModal(img){
+    document.getElementById('img-modal-content').src = img
+}
 //Launch Modal
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -62,5 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
 
 document.getElementById("submit").addEventListener("click", getApi)
