@@ -124,3 +124,7 @@ body {
   flex-direction: column;
   width: 20%;
 }
+
+.section:not(:last-child) {
+  margin-bottom: 4rem;
+}
