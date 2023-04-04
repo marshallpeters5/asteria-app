@@ -95,3 +95,10 @@ body {
 #centerAlignBtn {
   text-align: center;
 }
+
+#commentSec {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
