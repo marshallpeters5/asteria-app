@@ -58,3 +58,9 @@ body {
 #get-started {
   background-color: rgba(136, 67, 3, 0.808);
 }
+
+img {
+  border-radius: 5%;
+}
+
+media-body
