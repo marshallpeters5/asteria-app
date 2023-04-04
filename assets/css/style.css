@@ -78,3 +78,21 @@ body {
 #next{
   background-color: rgba(136, 67, 3, 0.808);
 }
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  text-align: left;
+}
+
+#sendMessagebtn {
+  background-color: rgba(136, 67, 3, 0.808);
+  border: 1px solid #222222;
+}
+
+#centerAlignBtn {
+  text-align: center;
+}
