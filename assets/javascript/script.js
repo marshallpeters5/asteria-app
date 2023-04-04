@@ -33,9 +33,7 @@ nextBtn.addEventListener('click', function () {
         alert('This is the last image')
     }
     else {
-        console.log(xG)
         document.getElementById('img-modal-content').src = imageBankG[xG+=1];
-        console.log(xG)
     }
 })
 
@@ -44,9 +42,7 @@ prevBtn.addEventListener('click', function () {
         alert('No more previous images')
     }
     else {
-        console.log(xG)
         document.getElementById('img-modal-content').src = imageBankG[xG-=1];
-        console.log(xG)
     }
 })
 
