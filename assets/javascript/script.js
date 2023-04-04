@@ -9,8 +9,10 @@ function getApi(event) {
     fetch(queryUrl)
         .then(function (response) {return response.json()})
         .then(function (data) {
+            console.log(data)
             var imgUrl = data.photos[0].img_src
             openImageModal(imgUrl);
+    
         })
         .catch(function () {
         });

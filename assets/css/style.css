@@ -95,3 +95,6 @@ body {
 #centerAlignBtn {
   text-align: center;
 }
+#img-modal-content{
+  object-fit: contain;
+}
