@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Asteria</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Asteria</title>
 </head>
+
 <body>
-    <section class="hero is-primary is-medium">
-  <!-- Hero head: will stick at the top -->
-  <div class="hero-head">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <h1 class="navbar-item">
-            Asteria
-          </h1>
-          <span class="navbar-burger" data-target="navbarMenuHeroA">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
+  <section class="hero is-primary is-medium">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <h1 class="navbar-item">
+              Asteria
+            </h1>
+            <span class="navbar-burger" data-target="navbarMenuHeroA">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
         </div>
+      </nav>
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="title">
+        <h2 The Visualization of The Red Planet></h2>
+        </p>
+        <p class="subtitle" id='main-description'>
+          Hello and welcome to Asteria. Asteria is the definitive place for an incredible journey of discovery of the
+          planet Mars. We are excited you have arrived to witness the fascinating landscapes of Mars through our daily
+          picture laboratory.
+          Mars has captured the imagination of people for decades. Modern technology now allows real-time photos and
+          landscape perspectives. Our site is dedicated to providing you with the most breathtaking and informative
+          images of Mars, taken by the many NASA projects throughout the years. At your leisure browse the
+          “picture-of-the-day”, learn about the most recent discoveries on Mars, and engage with our community of space
+          enthusiasts.
+
+        </p>
       </div>
-    </nav>
-  </div>
-
-  <!-- Hero content: will be in the middle -->
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <p class="title">
-       <h2 The Visualization of The Red Planet></h2>
-      </p>
-      <p class="subtitle" id = 'main-description'>
-        Hello and welcome to Asteria. Asteria is the definitive place for an incredible journey of discovery of the planet Mars. We are excited you have arrived to witness the fascinating landscapes of Mars through our daily picture laboratory.
-        Mars has captured the imagination of people for decades. Modern technology now allows real-time photos and landscape perspectives. Our site is dedicated to providing you with the most breathtaking and informative images of Mars, taken by the many NASA projects throughout the years. At your leisure browse the “picture-of-the-day”, learn about the most recent discoveries on Mars, and engage with our community of space enthusiasts.
-
-      </p>
+      <div class="centerButton">
+        <button id="get-started" class="button is-primary is-medium js-modal-trigger" data-target="modal-js-example">
+          Get Started
+        </button>
+      </div>
     </div>
-    <div class="centerButton">
-    <button id="get-started" class="button is-primary is-medium">
-        Get Started
-      </button>
-    </div>
-  </div>
-</section>
+  </section>
 
-<div class id="field-is-horizontal">
+  <div class="field is-horizontal">
     <div class="field-label is-normal">
       <label class="label">Please complete all information below to become a member:</label>
     </div>
@@ -112,10 +120,39 @@
       </div>
     </div>
   </div>
-  <input type="date" name="selected-day" id="input-date">
-  <button type="submit" id="submit">Submit</button>
-  
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-    <script src="./assets/javascript/script.js"></script>
+
+  <div class="modal" id="modal-js-example">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">What would you like us to search for? </p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <!-- Content ... -->
+        <input type="date" name="selected-day" id="input-date">
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success js-modal-trigger" type="submit" id="submit" data-target="image-modal">Save changes</button>
+        <button class="button">Cancel</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Image Modal --> 
+  <div class="modal" id="image-modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-4by3">
+        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+      </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  <!-- /Image Modal -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="./assets/javascript/script.js"></script>
 </body>
+
 </html>
