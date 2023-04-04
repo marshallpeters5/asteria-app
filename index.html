@@ -6,6 +6,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alkatra&family=Cinzel&family=Crimson+Text&family=Merriweather:wght@300&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -58,61 +63,45 @@
     </div>
   </section>
 
-  <div class="field is-horizontal">
+  <!--<div class="field is-horizontal">
     <div class="field-label is-normal">
-      <label class="label">Let's us know what you think !</label>
+      <label class="label">Please complete all information below to become a member:</label>
     </div>
     <div class="field-body">
       <div class="field is-narrow">
         <div class="control">
-          <div class="select is-fullwidth">
-            <select>
-              <option>what did you like about webpage</option>
-              <option>The images</option>
-              <option>The information</option>
-            </select>
-          </div>
+          
         </div>
       </div>
     </div>
   </div>
-  <div class="field is-horizontal">
-    <div class="field-label">
-      <label class="label">Already a member?</label>
-    </div>
-    <div class="field-body">
-      <div class="field is-narrow">
-        <div class="control">
-          <label class="radio">
-            <input type="radio" name="member">
-            Yes
-          </label>
-          <label class="radio">
-            <input type="radio" name="member">
-            No
-          </label>
-        </div>
-      </div>
+
+    
+    
     </div>
   </div>
+  
   <div class="field is-horizontal">
-    <div class="field-label is-normal">
-      <label class="label">Subject</label>
+    <div class="field">
+    <label class="label">Name</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="e.g Alex Smith">
     </div>
-    <div class="field-body">
-      <div class="field">
-        <div class="control">
-          <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
-        </div>
-        <p class="help is-danger">
-          This field is required
-        </p>
+  </div>
+  
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control">
+      <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+    </div>
+  
+       
       </div>
     </div>
   </div>
   <div class="field is-horizontal">
     <div class="field-label is-normal">
-      <label class="label">Question</label>
+      <label class="label">Comments</label>
     </div>
     <div class="field-body">
       <div class="field">
@@ -124,7 +113,6 @@
   </div>
   <div class="field is-horizontal">
     <div class="field-label">
-      <!-- Left empty for spacing -->
     </div>
     <div class="field-body">
       <div class="field">
@@ -135,13 +123,13 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 
   <div class="modal" id="modal-js-example">
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">What would you like us to search for? </p>
+        <p class="modal-card-title">Which date would you like to view rover imagery for?</p>
         <button class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
@@ -149,18 +137,23 @@
         <input type="date" name="selected-day" id="input-date">
       </section>
       <footer class="modal-card-foot">
-        <button class="button is-success js-modal-trigger" type="submit" id="submit" data-target="image-modal">Save changes</button>
+        <button class="button is-success js-modal-trigger" type="submit" id="submit" data-target="image-modal">Save
+          Changes</button>
         <button class="button">Cancel</button>
       </footer>
     </div>
   </div>
 
-  <!-- Image Modal --> 
-  <div class="modal" id="image-modal">
+  <!-- Image Modal -->
+  <div class="modal img-modal" id="image-modal">
     <div class="modal-background"></div>
     <div class="modal-content">
-      <p class="image is-4by3">
-        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+      <div class="is-horizontal" id="controls">
+        <button id="prev" class="button is-danger">◀ Prev</button>
+        <button id="next" class="button is-danger">Next ▶</button>
+      </div>
+      <p class="image is-fullwidth">
+        <img id="img-modal-content" src="" alt="Rover photo here">
       </p>
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
