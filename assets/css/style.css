@@ -139,8 +139,13 @@ body {
   background-color: black;
   color: white; /* To change the text color to white */
 }
+
 #github-btn{
   margin-left: 48%;
   margin-top: 50px;
   background-color: #fff;
+}
+
+#img_counter {
+  text-align: center;
 }
