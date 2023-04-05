@@ -103,3 +103,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.getElementById("submit").addEventListener("click", getApi)
+
+
+//js for form-kinson
+const form = document.querySelector('#mymarsform',);
+const marsEmail = document.querySelector('#mars');
+const mmarsTextarea = document.querySelector('#textareamars');
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // prevent the default form submission behavior
+
+  const inputValue = document.querySelector('#my-input').value;
+  const inputEmailValue = document.querySelector('#my-input2').value;
+  const inputtextareaValue = document.querySelector('#textarea').value;
+  localStorage.setItem('myData', inputValue);
+  localStorage.setItem('emailData', inputEmailValue);
+  localStorage.setItem('textareaData', inputtextareaValue);
+
+
+  console.log('myData'+inputValue + inputEmailValue + inputtextareaValue);
+});
