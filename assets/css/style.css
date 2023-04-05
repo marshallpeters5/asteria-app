@@ -1,7 +1,7 @@
 *{
   font-family: 'Merriweather', Helvetica, sans-serif;
 }
-.button {
+.custom-button {
   background-color: #222222;
   color: #fff;
   border-radius: 4px;
@@ -10,7 +10,7 @@
   border: none;
 }
 
-.button:hover {
+.custom-button:hover {
   background-color: darkred;
   cursor: pointer;
   color: #fff;
@@ -138,4 +138,9 @@ body {
 .footer {
   background-color: black;
   color: white; /* To change the text color to white */
+}
+#github-btn{
+  margin-left: 48%;
+  margin-top: 50px;
+  background-color: #fff;
 }
