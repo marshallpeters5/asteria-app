@@ -105,4 +105,30 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+<<<<<<< HEAD
+document.getElementById("submit").addEventListener("click", getApi)
+<<<<<<< HEAD
+
+
+//js for form-kinson
+const form = document.querySelector('#mymarsform',);
+const marsEmail = document.querySelector('#mars');
+const mmarsTextarea = document.querySelector('#textareamars');
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // prevent the default form submission behavior
+
+  const inputValue = document.querySelector('#my-input').value;
+  const inputEmailValue = document.querySelector('#my-input2').value;
+  const inputtextareaValue = document.querySelector('#textarea').value;
+  localStorage.setItem('myData', inputValue);
+  localStorage.setItem('emailData', inputEmailValue);
+  localStorage.setItem('textareaData', inputtextareaValue);
+
+
+  console.log('myData'+inputValue + inputEmailValue + inputtextareaValue);
+});
+=======
+>>>>>>> b71d3703f6de1dcef12fa3e242ab901cfcfad38a
+=======
 document.getElementById("submit").addEventListener("click", getNasaApi)
+>>>>>>> 06cdb3e3468dbe3e13912c1e6ae8aa3ef7c3cc6d
