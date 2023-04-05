@@ -28,20 +28,23 @@ function getApi(event) {
 var imageBankG
 var xG = 0
 
+
 nextBtn.addEventListener('click', function () {
-    if (xG == imageBankG.length) {
-        alert('This is the last image')
+    if (xG == imageBankG.length - 1) {
+        nextBtn.disabled = true
     }
     else {
+        prevBtn.disabled = false
         document.getElementById('img-modal-content').src = imageBankG[xG+=1];
     }
 })
 
 prevBtn.addEventListener('click', function () {
     if (xG == 0) {
-        alert('No more previous images')
+        prevBtn.disabled = true
     }
     else {
+        nextBtn.disabled = false
         document.getElementById('img-modal-content').src = imageBankG[xG-=1];
     }
 })
