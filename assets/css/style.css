@@ -128,3 +128,8 @@ body {
 .section:not(:last-child) {
   margin-bottom: 4rem;
 }
+
+.footer {
+  background-color: black;
+  color: white; /* To change the text color to white */
+}
