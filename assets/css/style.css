@@ -89,12 +89,18 @@ body {
 }
 #prev{
   background-color: rgba(136, 67, 3, 0.808);
+  position: absolute;
+  left: 20px;
+  top: 50%;
 }
 #prev:hover{
   background-color: darkorange;
 }
 #next{
   background-color: rgba(136, 67, 3, 0.808);
+  position: absolute;
+  right: 20px;
+  top: 50%;
 }
 #next:hover{
   background-color: darkorange;
