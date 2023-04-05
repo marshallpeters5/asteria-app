@@ -142,63 +142,39 @@
 
 
 
-  <footer>
+  <footer class="footer">
     <!-- Comment section -->
-    <commentSection id="commentSec">
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label">Please reach out to us with any suggestions you may think of, we love feedback!</label>
-        </div>
-        <div class="field-body">
-          <div class="field is-narrow">
-            <div class="control">
-
+      <div class="container">
+        <form>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="e.g Alex Smith">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                  <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Comment</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Enter your comment">
+                </div>
+              </div>
+              <div class="field is-narrow">
+                <div class="control">
+                  <button class="button is-primary" id="sendMessagebtn">Send</button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
-      </div>
-      </div>
-      <div class="field is-horizontal">
-        <div class="field">
-          <label class="label">Name</label>
-          <div class="control">
-            <input class="input" type="text" placeholder="e.g Alex Smith">
-          </div>
-          <div class="field">
-            <label class="label">Email</label>
-            <div class="control">
-              <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label">Comments</label>
-        </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control">
-              <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="field is-horizontal">
-        <div class="field-label">
-        </div>
-        <div class="field-body">
-          <div class="field">
-            <div class="control" id="centerAlignBtn">
-              <button class="button is-primary" id="sendMessagebtn">
-                Send message
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </commentSection>
     <!-- /Comment section -->
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
