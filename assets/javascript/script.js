@@ -106,28 +106,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-<<<<<<< HEAD
-document.getElementById("submit").addEventListener("click", getApi)
-<<<<<<< HEAD
-
+document.getElementById("submit").addEventListener("click", getNasaApi)
 
 //js for form-kinson
-const form = document.querySelector('#mymarsform',);
-const marsEmail = document.querySelector('#mars');
-const mmarsTextarea = document.querySelector('#textareamars');
-form.addEventListener('submit', function(event) {
+var sndMessage = document.querySelector('#sendMessagebtn',);
+var marsEmail = document.querySelector('#mars');
+var mmarsTextarea = document.querySelector('#textareamars');
+sndMessage.addEventListener('click', function(event) {
   event.preventDefault(); // prevent the default form submission behavior
-
-  const inputValue = document.querySelector('#my-input').value;
-  const inputEmailValue = document.querySelector('#my-input2').value;
-  const inputtextareaValue = document.querySelector('#textarea').value;
+  var inputValue = document.querySelector('#my-input').value;
+  var inputEmailValue = document.querySelector('#my-input2').value;
+  var inputtextareaValue = document.querySelector('#textarea').value;
   localStorage.setItem('myData', inputValue);
   localStorage.setItem('emailData', inputEmailValue);
   localStorage.setItem('textareaData', inputtextareaValue);
-
-
-  console.log('myData'+inputValue + inputEmailValue + inputtextareaValue);
 });
-
-document.getElementById("submit").addEventListener("click", getNasaApi)
