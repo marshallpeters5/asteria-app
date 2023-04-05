@@ -5,21 +5,20 @@ var nextBtn = document.getElementById('next');
 var prevBtn = document.getElementById('prev');
 
 
-
 function getApi(event) {
     event.preventDefault();
     var queryUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?page=1&earth_date=' + selectedDateEl.value + '&api_key=' + `${apiKey}`;
     fetch(queryUrl)
         .then(function (response) { return response.json() })
         .then(async function (data) {
+            var imgUrl = data.photos[0].img_src;
+            openImageModal(imgUrl);
             var totalImages = data.photos.length
             var imageBankL = []
             for (i = 0; i < totalImages; i++) {
                 imageBankL.push(data.photos[i].img_src);
                 window.imageBankG = imageBankL;
             }
-            var imgUrl = data.photos[0].img_src;
-            openImageModal(imgUrl);
         })
         .catch(function () {
         });
@@ -78,6 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const $target = document.getElementById(modal);
 
         $trigger.addEventListener('click', () => {
+            
+        document.getElementById('img-modal-content').src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png';
+        selectedDateEl.value = null;
             openModal($target);
         });
     });
