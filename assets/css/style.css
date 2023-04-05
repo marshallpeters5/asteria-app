@@ -139,3 +139,8 @@ body {
   background-color: black;
   color: white; /* To change the text color to white */
 }
+
+
+#img_counter {
+  text-align: center;
+}

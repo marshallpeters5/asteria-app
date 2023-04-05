@@ -4,6 +4,8 @@ var nasaApiKey = '0qMWKgY4Hc74rbHIH8PQajMGaFPK4oztpyJCkqS4';
 var weatherApiKey = '9c94824efa946f7fbfd1c97e28156fbb';
 var nextBtn = document.getElementById('next');
 var prevBtn = document.getElementById('prev');
+var imageBankG;
+var xG = 0;
 
 
 function getNasaApi(event) {
@@ -11,7 +13,8 @@ function getNasaApi(event) {
     var nasaQueryUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?page=1&earth_date=' + selectedDateEl.value + '&api_key=' + `${nasaApiKey}`;
     fetch(nasaQueryUrl)
         .then(function (response) { return response.json() })
-        .then(async function (data) {
+        .then(function (data) {
+            window.xG = 0;
             var imgUrl = data.photos[0].img_src;
             openImageModal(imgUrl);
             var totalImages = data.photos.length
@@ -20,13 +23,12 @@ function getNasaApi(event) {
                 imageBankL.push(data.photos[i].img_src);
                 window.imageBankG = imageBankL;
             }
+            window.imageBankG = imageBankL;
+            document.getElementById('img_counter').textContent = `${xG + 1}` + "/" + `${imageBankG.length}`
         })
         .catch(function () {
         });
 }
-
-var imageBankG
-var xG = 0
 
 
 nextBtn.addEventListener('click', function () {
@@ -36,6 +38,7 @@ nextBtn.addEventListener('click', function () {
     else {
         prevBtn.disabled = false
         document.getElementById('img-modal-content').src = imageBankG[xG+=1];
+        document.getElementById('img_counter').textContent = `${xG + 1}` + "/" + `${imageBankG.length}`
     }
 })
 
@@ -46,6 +49,7 @@ prevBtn.addEventListener('click', function () {
     else {
         nextBtn.disabled = false
         document.getElementById('img-modal-content').src = imageBankG[xG-=1];
+        document.getElementById('img_counter').textContent = `${xG + 1}` + "/" + `${imageBankG.length}`
     }
 })
 
@@ -76,9 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
         const modal = $trigger.dataset.target;
         const $target = document.getElementById(modal);
-
         $trigger.addEventListener('click', () => {
-            
         document.getElementById('img-modal-content').src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png';
         selectedDateEl.value = null;
             openModal($target);
@@ -127,8 +129,5 @@ form.addEventListener('submit', function(event) {
 
   console.log('myData'+inputValue + inputEmailValue + inputtextareaValue);
 });
-=======
->>>>>>> b71d3703f6de1dcef12fa3e242ab901cfcfad38a
-=======
+
 document.getElementById("submit").addEventListener("click", getNasaApi)
->>>>>>> 06cdb3e3468dbe3e13912c1e6ae8aa3ef7c3cc6d
