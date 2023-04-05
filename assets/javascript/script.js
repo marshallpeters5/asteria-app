@@ -105,9 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-<<<<<<< HEAD
-document.getElementById("submit").addEventListener("click", getApi)
-<<<<<<< HEAD
+
 
 
 //js for form-kinson
@@ -127,8 +125,6 @@ form.addEventListener('submit', function(event) {
 
   console.log('myData'+inputValue + inputEmailValue + inputtextareaValue);
 });
-=======
->>>>>>> b71d3703f6de1dcef12fa3e242ab901cfcfad38a
-=======
+
+
 document.getElementById("submit").addEventListener("click", getNasaApi)
->>>>>>> 06cdb3e3468dbe3e13912c1e6ae8aa3ef7c3cc6d
