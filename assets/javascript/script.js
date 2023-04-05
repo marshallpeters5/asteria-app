@@ -1,14 +1,15 @@
-var selectedDateEl = document.querySelector('#input-date')
-var selectedDate = dayjs(selectedDateEl.value).format('YYYY/MM/DD')
-var apiKey = '0qMWKgY4Hc74rbHIH8PQajMGaFPK4oztpyJCkqS4';
+var selectedDateEl = document.querySelector('#input-date');
+var selectedDate = dayjs(selectedDateEl.value).format('YYYY/MM/DD');
+var nasaApiKey = '0qMWKgY4Hc74rbHIH8PQajMGaFPK4oztpyJCkqS4';
+var weatherApiKey = '9c94824efa946f7fbfd1c97e28156fbb';
 var nextBtn = document.getElementById('next');
 var prevBtn = document.getElementById('prev');
 
 
-function getApi(event) {
+function getNasaApi(event) {
     event.preventDefault();
-    var queryUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?page=1&earth_date=' + selectedDateEl.value + '&api_key=' + `${apiKey}`;
-    fetch(queryUrl)
+    var nasaQueryUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?page=1&earth_date=' + selectedDateEl.value + '&api_key=' + `${nasaApiKey}`;
+    fetch(nasaQueryUrl)
         .then(function (response) { return response.json() })
         .then(async function (data) {
             var imgUrl = data.photos[0].img_src;
@@ -104,4 +105,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.getElementById("submit").addEventListener("click", getApi)
+document.getElementById("submit").addEventListener("click", getNasaApi)
