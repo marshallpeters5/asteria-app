@@ -150,3 +150,30 @@ body {
 #img_counter {
   text-align: center;
 }
+
+.modal-card-title {
+  font-size: 1.2rem;
+}
+
+@keyframes modulefadein {
+  0% {opacity: 0;}
+  100% { opacity: 1; }
+}
+
+.modal-card {
+  animation-name: modulefadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+#img-modal-content {
+  animation-name: modulefadein;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+
+}
+
+information {
+  display: flex;
+  justify-content: space-between;
+}
