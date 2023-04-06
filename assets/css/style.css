@@ -162,6 +162,15 @@ body {
 }
 #gh-link{
   margin-top: 20px;
-  margin-left: 47%;
-  width: 170px;
+  margin-left: 48.4%;
+  width: 80px;
+  background-color: #222222;
+  border: 1px solid #000000;
+  color: #FFFFFF;
+}
+#gh-link:hover{
+  transform: scale(1.03);
+}
+.title-h5{
+  font-size: xx-large;
 }
