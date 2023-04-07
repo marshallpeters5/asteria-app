@@ -249,3 +249,8 @@ body {
 .modal-card-title{
   text-align: center;
 }
+.subscribe{
+  margin-bottom: 50px;
+  text-decoration: underline;
+  font-size: large;
+}
