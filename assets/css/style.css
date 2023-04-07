@@ -237,3 +237,15 @@ body {
   color: #fff;
   text-decoration: underline;
 }
+
+.modal-card-foot{
+  justify-content: center;
+}
+
+.modal-card-body {
+  text-align: center;
+}
+
+.modal-card-title{
+  text-align: center;
+}
