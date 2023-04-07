@@ -1,7 +1,7 @@
 var selectedDateEl = document.querySelector('#input-date');
 var selectedDate = dayjs(selectedDateEl.value).format('YYYY-MM-DD');
 var nasaApiKey = '0qMWKgY4Hc74rbHIH8PQajMGaFPK4oztpyJCkqS4';
-var weatherApiKey = '9c94824efa946f7fbfd1c97e28156fbb';
+var weatherApiKey = '66e72c1c25d39f1f6a1cdad30c8547f8';
 var nextBtn = document.getElementById('next');
 var prevBtn = document.getElementById('prev');
 var imgDisplay = document.getElementById('img-modal-content')
@@ -13,6 +13,20 @@ var imageBankG;
 var xG = 0;
 var roverNameG = "";
 var roverStatusG = "";
+
+var curiosityLaunchDate = '1322283600';
+var perseveranceLaunchDate = '1596081600';
+var capeLat = '28.396837'
+var capeLon ='-80.605659'
+var weatherApiCape = 'https://api.openweathermap.org/data/2.5/forecast?lat='+ capeLat +'&lon='+ capeLon + '&appid=' + weatherApiKey;
+
+fetch(weatherApiCape)
+.then(function(response){return response.json()})
+.then(function(reponseData){
+    var tempK = reponseData.list[0].main.temp
+    var windSpeed = reponseData.list[0].wind.speed
+    var humidity = reponseData.list[0].main.humidity;
+})
 
 function pickRandomRover(lengthData) {
     var resultRover = Math.floor(Math.random() * lengthData.length);

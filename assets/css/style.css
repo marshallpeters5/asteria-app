@@ -202,3 +202,15 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.modal-card-foot{
+  justify-content: center;
+}
+
+.modal-card-body {
+  text-align: center;
+}
+
+.modal-card-title{
+  text-align: center;
+}
