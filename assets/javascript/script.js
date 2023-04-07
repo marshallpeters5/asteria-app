@@ -4,8 +4,13 @@ var nasaApiKey = '0qMWKgY4Hc74rbHIH8PQajMGaFPK4oztpyJCkqS4';
 var weatherApiKey = '9c94824efa946f7fbfd1c97e28156fbb';
 var nextBtn = document.getElementById('next');
 var prevBtn = document.getElementById('prev');
+var imgDisplay = document.getElementById('img-modal-content')
+var roverNameId = document.getElementById('rover-name');
+var roverStatusId = document.getElementById('rover-status');
 var imageBankG;
 var xG = 0;
+var roverNameG = "";
+var roverStatusG = "";
 
 
 function getNasaApi(event) {
@@ -14,6 +19,8 @@ function getNasaApi(event) {
     fetch(nasaQueryUrl)
         .then(function (response) { return response.json() })
         .then(function (data) {
+            roverInfo(data);
+            roverInfoTextChanger();
             window.xG = 0;
             var imgUrl = data.photos[0].img_src;
             openImageModal(imgUrl);
@@ -28,6 +35,16 @@ function getNasaApi(event) {
         })
         .catch(function () {
         });
+}
+
+function roverInfo(jsonData) {
+    window.roverNameG = jsonData.photos[0].rover.name;
+    window. roverStatusG = jsonData.photos[0].rover.status;
+}
+function roverInfoTextChanger() {
+    roverNameId.textContent = roverNameG;
+    roverStatusId.textContent = 'Status: ' + roverStatusG.charAt(0).toUpperCase() + roverStatusG.slice(1);
+
 }
 
 
@@ -92,6 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const $target = $close.closest('.modal');
 
         $close.addEventListener('click', () => {
+            prevBtn.disabled = false;
+            nextBtn.disabled = false;
             closeModal($target);
         });
     });
@@ -101,6 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const e = event || window.event;
 
         if (e.keyCode === 27) { // Escape key
+            prevBtn.disabled = false;
+            nextBtn.disabled = false;
             closeAllModals();
         }
     });

@@ -151,6 +151,7 @@ body {
 #img_counter {
   text-align: center;
 }
+<<<<<<< HEAD
 .body-photo{
   width: 300px;
   height: 300px;
@@ -173,4 +174,32 @@ body {
 }
 .title-h5{
   font-size: xx-large;
+=======
+
+.modal-card-title {
+  font-size: 1.2rem;
+}
+
+@keyframes modulefadein {
+  0% {opacity: 0;}
+  100% { opacity: 1; }
+}
+
+.modal-card {
+  animation-name: modulefadein;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+#img-modal-content {
+  animation-name: modulefadein;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+
+}
+
+information {
+  display: flex;
+  justify-content: space-between;
+>>>>>>> 02b16c1138dc18c545b6a5263aae34a5eae4c3f6
 }
