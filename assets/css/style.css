@@ -1,5 +1,6 @@
 *{
   font-family: 'Merriweather', Helvetica, sans-serif;
+  line-height: 1.8;
 }
 .custom-button {
   background-color: #222222;
@@ -51,7 +52,7 @@
 }
 
 body {
-  background-color: #222222;
+  background-color: #000000;
 }
 
 .centerButton {
@@ -137,7 +138,7 @@ body {
 }
 
 .footer {
-  background-color: black;
+  background-color: #111111;
   color: white; /* To change the text color to white */
 }
 
@@ -149,6 +150,29 @@ body {
 
 #img_counter {
   text-align: center;
+}
+.body-photo{
+  width: 300px;
+  height: 300px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.rover-photo{
+  box-shadow: 20px 20px 1px #222222, -20px -20px 1px #111111;
+}
+#gh-link{
+  margin-top: 20px;
+  margin-left: 48.4%;
+  width: 80px;
+  background-color: #222222;
+  border: 1px solid #000000;
+  color: #FFFFFF;
+}
+#gh-link:hover{
+  transform: scale(1.03);
+}
+.title-h5{
+  font-size: xx-large;
 }
 
 .modal-card-title {
@@ -173,7 +197,8 @@ body {
 
 }
 
-information {
+.photo-info li {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
