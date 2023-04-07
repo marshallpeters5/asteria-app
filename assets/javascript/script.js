@@ -42,7 +42,7 @@ function roverInfo(jsonData) {
     window. roverStatusG = jsonData.photos[0].rover.status;
 }
 function roverInfoTextChanger() {
-    roverNameId.textContent = roverNameG;
+    roverNameId.textContent = 'Rover: ' + roverNameG;
     roverStatusId.textContent = 'Status: ' + roverStatusG.charAt(0).toUpperCase() + roverStatusG.slice(1);
 
 }
