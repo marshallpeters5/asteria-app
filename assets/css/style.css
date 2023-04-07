@@ -202,6 +202,41 @@ body {
   justify-content: center;
   align-items: center;
 }
+#cards{
+  margin:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.card{
+  width: 25vw;
+  margin: 40px;
+  padding: 50px;
+  background-color: #333333;
+}
+.content{
+  font-size: x-small;
+}
+#pers-title{
+  color: #fff;
+}
+#pers-subtitle{
+  color: #fff;
+}
+.specs{
+  font-size: 18px;
+}
+.specs p{
+  font-size: x-small;
+}
+#white-bg1{
+  color: #fff;
+}
+#pers-source{
+  color: #fff;
+  text-decoration: underline;
+}
 
 .modal-card-foot{
   justify-content: center;
