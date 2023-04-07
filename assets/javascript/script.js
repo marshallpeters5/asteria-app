@@ -1,5 +1,5 @@
 var selectedDateEl = document.querySelector('#input-date');
-var selectedDate = dayjs(selectedDateEl.value).format('YYYY/MM/DD');
+var selectedDate = dayjs(selectedDateEl.value).format('YYYY-MM-DD');
 var nasaApiKey = '0qMWKgY4Hc74rbHIH8PQajMGaFPK4oztpyJCkqS4';
 var weatherApiKey = '9c94824efa946f7fbfd1c97e28156fbb';
 var nextBtn = document.getElementById('next');
@@ -7,18 +7,47 @@ var prevBtn = document.getElementById('prev');
 var imgDisplay = document.getElementById('img-modal-content')
 var roverNameId = document.getElementById('rover-name');
 var roverStatusId = document.getElementById('rover-status');
+var roverNamesList = ['curiosity', 'perseverance']
+var generateRoverG;
 var imageBankG;
 var xG = 0;
 var roverNameG = "";
 var roverStatusG = "";
 
+function pickRandomRover(lengthData) {
+    var resultRover = Math.floor(Math.random() * lengthData.length);
+    var rName = roverNamesList[resultRover];
+    window.generateRoverG = rName;
+}
 
 function getNasaApi(event) {
     event.preventDefault();
-    var nasaQueryUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?page=1&earth_date=' + selectedDateEl.value + '&api_key=' + `${nasaApiKey}`;
+    pickRandomRover(roverNamesList);
+    var selectedDate = dayjs(selectedDateEl.value).format('YYYY-MM-DD');
+    var nasaQueryUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/' + `${generateRoverG}` + '/photos?page=1&earth_date=' + selectedDate + '&api_key=' + `${nasaApiKey}`;
     fetch(nasaQueryUrl)
         .then(function (response) { return response.json() })
         .then(function (data) {
+            if (data.photos.length == 0) {
+                var nasaQueryUrlOne = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?page=1&earth_date=' + selectedDate + '&api_key=' + `${nasaApiKey}`;
+                fetch(nasaQueryUrlOne)
+                    .then(function (response) { return response.json() })
+                    .then(function (data) {
+                        roverInfo(data);
+                        roverInfoTextChanger();
+                        window.xG = 0;
+                        var imgUrl = data.photos[0].img_src;
+                        openImageModal(imgUrl);
+                        var totalImages = data.photos.length
+                        var imageBankL = []
+                        for (i = 0; i < totalImages; i++) {
+                            imageBankL.push(data.photos[i].img_src);
+                            window.imageBankG = imageBankL;
+                        }
+                        window.imageBankG = imageBankL;
+                        document.getElementById('img_counter').textContent = `${xG + 1}` + "/" + `${imageBankG.length}`
+                    })
+            } else {
             roverInfo(data);
             roverInfoTextChanger();
             window.xG = 0;
@@ -32,14 +61,15 @@ function getNasaApi(event) {
             }
             window.imageBankG = imageBankL;
             document.getElementById('img_counter').textContent = `${xG + 1}` + "/" + `${imageBankG.length}`
-        })
+        }})
         .catch(function () {
         });
-}
+    }
+
 
 function roverInfo(jsonData) {
     window.roverNameG = jsonData.photos[0].rover.name;
-    window. roverStatusG = jsonData.photos[0].rover.status;
+    window.roverStatusG = jsonData.photos[0].rover.status;
 }
 function roverInfoTextChanger() {
     roverNameId.textContent = roverNameG;
@@ -54,7 +84,7 @@ nextBtn.addEventListener('click', function () {
     }
     else {
         prevBtn.disabled = false
-        document.getElementById('img-modal-content').src = imageBankG[xG+=1];
+        document.getElementById('img-modal-content').src = imageBankG[xG += 1];
         document.getElementById('img_counter').textContent = `${xG + 1}` + "/" + `${imageBankG.length}`
     }
 })
@@ -65,7 +95,7 @@ prevBtn.addEventListener('click', function () {
     }
     else {
         nextBtn.disabled = false
-        document.getElementById('img-modal-content').src = imageBankG[xG-=1];
+        document.getElementById('img-modal-content').src = imageBankG[xG -= 1];
         document.getElementById('img_counter').textContent = `${xG + 1}` + "/" + `${imageBankG.length}`
     }
 })
@@ -98,8 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const modal = $trigger.dataset.target;
         const $target = document.getElementById(modal);
         $trigger.addEventListener('click', () => {
-        document.getElementById('img-modal-content').src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png';
-        selectedDateEl.value = null;
+            document.getElementById('img-modal-content').src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png';
+            selectedDateEl.value = null;
             openModal($target);
         });
     });
@@ -133,12 +163,12 @@ document.getElementById("submit").addEventListener("click", getNasaApi)
 var sndMessage = document.querySelector('#sendMessagebtn',);
 var marsEmail = document.querySelector('#mars');
 var mmarsTextarea = document.querySelector('#textareamars');
-sndMessage.addEventListener('click', function(event) {
-  event.preventDefault(); // prevent the default form submission behavior
-  var inputValue = document.querySelector('#my-input').value;
-  var inputEmailValue = document.querySelector('#my-input2').value;
-  var inputtextareaValue = document.querySelector('#textarea').value;
-  localStorage.setItem('myData', inputValue);
-  localStorage.setItem('emailData', inputEmailValue);
-  localStorage.setItem('textareaData', inputtextareaValue);
+sndMessage.addEventListener('click', function (event) {
+    event.preventDefault(); // prevent the default form submission behavior
+    var inputValue = document.querySelector('#my-input').value;
+    var inputEmailValue = document.querySelector('#my-input2').value;
+    var inputtextareaValue = document.querySelector('#textarea').value;
+    localStorage.setItem('myData', inputValue);
+    localStorage.setItem('emailData', inputEmailValue);
+    localStorage.setItem('textareaData', inputtextareaValue);
 });
