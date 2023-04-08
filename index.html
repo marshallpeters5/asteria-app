@@ -53,7 +53,7 @@
         </p>
       </div>
       <div class="centerButton">
-        <button id="get-started" class="button is-primary is-medium js-modal-trigger" data-target="modal-js-example">
+        <button id="get-started" class="button is-primary js-modal-trigger" data-target="modal-js-example">
           Get Started
         </button>
       </div>
@@ -70,7 +70,7 @@
       </header>
       <section class="modal-card-body">
         <!-- Content ... -->
-        <input type="date" min="2010-01-01" max="2023-04-04" name="selected-day" id="input-date" />
+        <input type="date" min="2010-01-01" max="2023-04-10" name="selected-day" id="input-date" />
       </section>
       <footer class="modal-card-foot">
         <button class="button is-success js-modal-trigger" type="submit" id="submit" data-target="image-modal">
@@ -83,6 +83,11 @@
   <div class="modal img-modal" id="image-modal">
     <div class="modal-background"></div>
     <div class="modal-content">
+      <p class="image is-fullwidth">
+        <img id="img-modal-content"
+          src="https://img.freepik.com/premium-vector/update-concept-application-loading-process-symbol-web-screen-vector-illustration-flat_186332-1253.jpg"
+          alt="Rover photo here" />
+      </p>
       <ul class="photo-info">
         <li id="img_counter"></li>
         <li id="rover-name"></li>
@@ -98,24 +103,31 @@
   <!-- /Image Modal -->
   <section class="section">
     <div class="container">
-      <div class="columns is-centered space">
+      <div class="columns is-centered body-content">
         <img src="./assets/img/mars_landscape_isometric.jpg" class="body-photo"
           alt="A photo of Mars, the 4th planet in our solar system." />
         <div class="column is-half">
           <div class="media">
+            <figure class="media-left">
+              <p class="image is-4by3">
+                <img
+                  src="https://media2.giphy.com/media/zSsWtkEYZ4K278AwCN/giphy.gif?cid=ecf05e47rkkc99du04v5hk0of3tgmg9i6h64ediuecqaa4r8&rid=giphy.gif&ct=g"
+                  alt="Generic placeholder image" />
+              </p>
+            </figure>
             <div class="media-content has-text-centered">
               <h5 class="mt-0 title-h5">Martian Landscape</h5>
               <p>
-                The landscape of Mars is characterized by a variety of features that have
+                Much like Earth, the landscape of Mars is characterized by a variety of features that have
                 been shaped by geological processes over billions of years.
                 Some of the most prominent features on Mars include impact
                 craters (Mars holds 21% of the solar systems impact craters,
                 second only to our moon at 31%), volcanoes such as Olympus
                 Mons which is approximately 3x larger than Mount Everest and is visible from Earth's surface through a
-                high-powered telescopic lens,
-                canyons such as the Mariner Valley Canyon which is nearly
+                high-power telescopic lens. Other interesting landscape features including
+                canyons, such as the Mariner Valley Canyon which is nearly
                 2,600 miles long and 4x larger than the Grand Canyon, and vast
-                plains spanning up to 3,400 km (2100~ mi) wide.
+                plains spanning up to 3,400 km (2100~ mi) wide also run across the Red Planet.
               </p>
             </div>
           </div>
@@ -125,7 +137,7 @@
   </section>
   <section class="section">
     <div class="container">
-      <div class="columns is-centered">
+      <div class="columns is-centered body-content">
         <div class="column is-half">
           <div class="media">
             <figure class="media-left">
@@ -134,34 +146,39 @@
             <div class="media-content has-text-centered">
               <h5 class="mt-0 title-h5">Mission Activity</h5>
               <p>
-                In the 1930's the Jet Propulsion Laboratory (JPL) was the
-                birthplace of rocket propulsion. In the context of space
-                exploration, a "landing" generally refers to the process of
-                safely bringing a spacecraft down to the surface of a planet
-                or other celestial body. NASA's JPL (Jet Propulsion Lab) has
-                been involved in the development and operation of a number of
-                such lander missions, including the Mars Pathfinder mission in
-                1996, the Mars Exploration Rovers (Spirit and Opportunity) in
-                2004, the Mars Phoenix lander in 2008, and the Mars Science
-                Laboratory (Curiosity rover) in 2012. NASA's JPL is also
-                currently involved in the development of the Mars 2020
-                mission, which includes the Perseverance rover and the
-                Ingenuity Mars helicopter.
+                NASA's Jet Propulsion Laboratory (JPL) is a federally-funded research and development center located in
+                Pasadena, California. JPL is primarily responsible for the development and operation of robotic
+                spacecraft for many of NASA's space exploration missions, including those of which have the fruits of
+                their labor on display here.
+
+                JPL's primary mission is to conduct space exploration and Earth science research, and to design, build,
+                and operate robotic spacecraft and planetary rovers. JPL has been responsible for many of NASA's most
+                successful missions, including the Mars Exploration Rovers you see below, the Mars Reconnaissance
+                Orbiter, the
+                Cassini-Huygens mission to Saturn, and the Voyager missions to the outer planets.
+
+                In addition to designing and building spacecraft, JPL also conducts research on a variety of scientific
+                topics, such as astrophysics, Earth science, and climate change. JPL is home to a number of specialized
+                facilities, including a Deep Space Network for communicating with spacecraft, a Mars Yard for testing
+                rovers, and a Clean Room for assembling and testing spacecraft components.
+
+                Needless to say, JPL plays a critical role in NASA's efforts to explore our solar system and to
+                understand its vast environments.
               </p>
             </div>
           </div>
         </div>
         <img src="./assets/img/rover-landing.jpg" class="body-photo rover-photo"
-          alt="A photo of the Perseverance taking a 'selfie' on the suraface of Mars." />
+          alt="A photo of the Perseverance taking a 'selfie' in the suraface of Mars." />
       </div>
     </div>
   </section>
-  <h5 class="has-text-centered title-h5">Meet The Rovers</h5>
+  <h5 class="has-text-centered title-h5 meet-the-rovers">Meet The Rovers</h5>
   <div id="cards">
     <div class="card is-small">
       <div class="card-image">
         <figure class="image is-4by3">
-          <img src="./assets/img/perserverance.png" alt="Placeholder image" class="card-photo"/>
+          <img src="./assets/img/perserverance.png" alt="Placeholder image" class="card-photo" />
         </figure>
       </div>
       <div class="card-content">
@@ -183,7 +200,7 @@
             Toolkit: 7 science instruments<br />
           </p>
         </div>
-        <div class="content has-text-centered">
+        <div class="content has-text-centered is-small">
           <h1 class="specs" id="white-bg1">About:</h1>
           Perseverance Landed in Jezero Crater on February 18, 2021; its
           mission was to help answer the question about signs of past
@@ -194,7 +211,7 @@
           atmosphere and help Nasa discover methods of getting oxygen from the
           air in the Martian atmosphere. This would increase Nasa chances of
           designing items that would allow astronauts to explore Mars in the
-          future.<br>
+          future.<br />
           <a href="https://spaceplace.nasa.gov/mars-2020/en/" id="pers-source">Source</a>
         </div>
       </div>
@@ -202,7 +219,7 @@
     <div class="card is-small">
       <div class="card-image">
         <figure class="image is-4by3">
-          <img src="./assets/img/spirit & opportunity222.jpg" alt="Placeholder image" class="card-photo"/>
+          <img src="./assets/img/spirit & opportunity222.jpg" alt="Placeholder image" class="card-photo" />
         </figure>
       </div>
       <div class="card-content">
@@ -219,12 +236,12 @@
         <div class="content has-text-centered specs">
           Specifications:<br />
           <p>
-            Weight: 374 lbs<br />
+            Weight: 408 lbs<br />
             Top Speed: 0.01 mph<br />
-            Toolkit: 5 science instruments<br />
+            Toolkit: 5 science instruments each<br />
           </p>
         </div>
-        <div class="content has-text-centered">
+        <div class="content has-text-centered is-small">
           <h1 class="specs" id="white-bg1">About:</h1>
           According to NASA Spirit and Opportunity were twin rovers sent to
           planet Mars to determine whether water ever existed on the Red
@@ -234,15 +251,15 @@
           other hand, The Opportunity landed on Meridiani Planum. It studied
           layers of minerals in the rocks, and the evidence it collected
           suggested there may have been the presence of a salty sea on
-          Mars.<br>
-          <a href=" https://spaceplace.nasa.gov/mars-spirit-opportunity/en/" id="pers-source">Source</a><br>
+          Mars.<br />
+          <a href=" https://spaceplace.nasa.gov/mars-spirit-opportunity/en/" id="pers-source">Source</a>
         </div>
       </div>
     </div>
     <div class="card is-small">
       <div class="card-image">
         <figure class="image is-4by3">
-          <img src="./assets/img/curiosity.jpg" alt="Placeholder image" class="card-photo"/>
+          <img src="./assets/img/curiosity.jpg" alt="Placeholder image" class="card-photo" />
         </figure>
       </div>
       <div class="card-content">
@@ -259,33 +276,32 @@
         <div class="content has-text-centered specs">
           Specifications:<br />
           <p>
-            Weight: 1892 lbs<br />
+            Weight: 1,982 lb lbs<br />
             Top Speed: 0.09 mph<br />
             Toolkit: 10 science instruments<br />
           </p>
         </div>
-        <div class="content has-text-centered">
+        <div class="content has-text-centered is-small">
           <h1 class="specs" id="white-bg1">About:</h1>
-          <p>
-            Per NASA Curiosity was sent to Mars to determine if that planet
-            had conditions to support microbial life. This rover is known to
-            be the largest robot to ever land on another planet, it's the size
-            of an SUV. Its big wheels help it roll over rocks and sand without
-            the threat of being stuck. Curiosity landed in Gale Crater which
-            also has a tall mountain in the middle of its existence. This
-            mountain had many layers of rock and each layer had different
-            minerals from a different time period which tells NASA about the
-            possibility that the Red Planet had water at one point. <br>
-            <a href="https://spaceplace.nasa.gov/mars-curiosity/en/" id="pers-source">Source</a>
-          </p>
-
+          Per NASA Curiosity was sent to Mars to determine if that planet
+          had conditions to support microbial life. This rover is known to
+          be the largest robot to ever land on another planet, it's the size
+          of an SUV. Its big wheels help it roll over rocks and sand without
+          the threat of being stuck. Curiosity landed in Gale Crater which
+          also has a tall mountain in the middle of its existence. This
+          mountain had many layers of rock and each layer had different
+          minerals from a different time period which tells NASA about the
+          possibility that the Red Planet had water at one point. <br>
+          <a href="https://spaceplace.nasa.gov/mars-curiosity/en/" id="pers-source">Source</a>
         </div>
       </div>
     </div>
   </div>
   <!--Weather Section-->
+  <div class="is-centered has-text-centered">
+    <h1 class="title-h5 weather-title">Countdown to Launch</h1>
+  </div>
   <div class="content is-small has-text-centered weather card is-centered">
-    <h1>Countdown to Launch</h1>
     <img src="./assets/img/liftoff-launch.jpg" alt="">
     <p>There are a many variables to consider before NASA's billion dollar tool can be safely launched on it's journey
       to Mars, and a lot
@@ -293,8 +309,9 @@
         href="https://www.nasa.gov/centers/kennedy/pdf/531435main_weather-rules-march2011.pdf"
         id="weather-source">here</a>.</p>
     <h2>Today's Launch Criteria</h2>
-    <p>In the list below we will display today's weather forecast so that we can see just how difficult it can be to
-      achieve a successful launch. If any of these items fail the all-systems-go ready check,
+    <p>In the list below we will display today's weather forecast at the Cape Canaveral Air Force Base where the rovers
+      are launched from so that we can see just how difficult it can be to
+      achieve a successful take off. If any of these criteria fail the all-systems-go ready check,
       then any launches scheduled for the day would be postponed. However, if all of the weather checks come back green,
       then the mission would proceed as planned.</p>
     <li>Minimum viable temperature to begin fueling: 44.6 °F</li>
@@ -312,7 +329,7 @@
   <footer class="footer is-centered">
     <div class="container">
       <h3 class="has-text-centered subscribe">
-        Subscribe to our newsletter!
+        Subscribe to our newsletter for updates on the exploration of Mars
       </h3>
       <form>
         <div class="field is-horizontal">
@@ -351,7 +368,7 @@
       <sub>Copyright © 2023 <br />Credits: Marshall Peters, Kinson Metayer,
         Laisha Buck, Kayla Nichols, Denis Peci</sub>
     </p>
-    <a href="https://github.com/marshallpeters5/asteria-app" class="button" id="gh-link">GitHub</a>
+    <a href="https://github.com/marshallpeters5/asteria-app" class="button is-centered" id="gh-link">GitHub</a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   <script src="./assets/javascript/script.js"></script>

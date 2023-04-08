@@ -38,7 +38,9 @@
 .container {
   justify-content: center;
 }
-
+.section{
+  margin-top: 40px;
+}
 .navbar-item {
   padding-top: 70px;
   font-size: 75px;
@@ -120,7 +122,9 @@ body {
   background-color: rgba(136, 67, 3, 0.808);
   border: 1px solid #222222;
 }
-
+#sendMessagebtn:hover{
+  background-color: darkorange;
+}
 #centerAlignBtn {
   text-align: center;
 }
@@ -141,6 +145,7 @@ body {
   margin-top: 100px;
   background-color: #111111;
   color: white; /* To change the text color to white */
+  padding: 40px;
 }
 
 #github-btn{
@@ -160,6 +165,9 @@ body {
 }
 .rover-photo{
   box-shadow: 20px 20px 1px #222222, -20px -20px 1px #111111;
+}
+.card-photo{
+  object-fit: cover;
 }
 #gh-link{
   margin-top: 20px;
@@ -207,13 +215,12 @@ body {
   margin:auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   position: relative;
 }
 .card{
   width: 25vw;
-  margin: 40px;
-  padding: 50px;
+  padding: 100px;
   background-color: #333333;
 }
 .content{
@@ -226,7 +233,7 @@ body {
   color: #fff;
 }
 .specs{
-  font-size: 20px;
+  font-size: 22px;
 }
 .specs p{
   font-size: x-small;
@@ -252,18 +259,20 @@ body {
 }
 .subscribe{
   margin-bottom: 50px;
-  text-decoration: underline;
-  font-size: large;
+  font-size: xx-large;
 }
 div.weather > *{
   color: #fff;
 }
 .weather{
   margin: auto;
-  width: 40vw;
-  padding: 80px;
+  width: 25vw;
+  padding: 100px;
+  margin-top: 100px;
 }
-
+.weather-title{
+  margin-top: 200px;
+}
 div.weather > img {
   width: 500px;
   height: 400px;
@@ -286,5 +295,11 @@ text-decoration: underline;
 .card-photo{
   width: 300px;
   height: 300px;
-  object-fit:cover;
+}
+.meet-the-rovers{
+  margin: 100px;
+}
+.body-content > img{
+  margin-bottom: auto;
+  margin-top: auto;
 }

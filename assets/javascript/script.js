@@ -12,13 +12,9 @@ var generateRoverG;
 var imageBankG;
 var xG = 0;
 var roverNameG = "";
-var roverStatusG = "";
 
-
-var curiosityLaunchDate = '1322283600';
-var perseveranceLaunchDate = '1596081600';
 var capeLat = '28.396837'
-var capeLon = '-80.605659'
+var capeLon ='-80.605659'
 var weatherApiCape = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + capeLat + '&lon=' + capeLon + '&units=imperial&appid=' + weatherApiKey;
 
 fetch(weatherApiCape)
@@ -156,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const modal = $trigger.dataset.target;
         const $target = document.getElementById(modal);
         $trigger.addEventListener('click', () => {
-            document.getElementById('img-modal-content').src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png';
+            //   document.getElementById('img-modal-content').src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png';
             selectedDateEl.value = null;
             openModal($target);
         });
