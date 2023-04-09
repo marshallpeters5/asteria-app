@@ -12,21 +12,30 @@ var generateRoverG;
 var imageBankG;
 var xG = 0;
 var roverNameG = "";
-var roverStatusG = "";
 
-var curiosityLaunchDate = '1322283600';
-var perseveranceLaunchDate = '1596081600';
 var capeLat = '28.396837'
 var capeLon ='-80.605659'
-var weatherApiCape = 'https://api.openweathermap.org/data/2.5/forecast?lat='+ capeLat +'&lon='+ capeLon + '&appid=' + weatherApiKey;
+var weatherApiCape = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + capeLat + '&lon=' + capeLon + '&units=imperial&appid=' + weatherApiKey;
 
 fetch(weatherApiCape)
-.then(function(response){return response.json()})
-.then(function(reponseData){
-    var tempK = reponseData.list[0].main.temp
-    var windSpeed = reponseData.list[0].wind.speed
-    var humidity = reponseData.list[0].main.humidity;
-})
+    .then(function (response) { return response.json() })
+    .then(function (reponseData) {
+        var tempMin = reponseData.list[0].main.temp_min
+        var tempMax = reponseData.list[0].main.temp_max
+        var windSpeed = reponseData.list[0].wind.gust
+        var humidity = reponseData.list[0].main.humidity;
+        document.getElementById('temp-low').innerHTML = "Current lowest possible temperature: " + `${tempMin}` + " °F"
+        document.getElementById('temp-high').innerHTML = "Current highest possible temperature: " + `${tempMax}` + " °F"
+        document.getElementById('humidity').innerHTML = "Current humidity: " + `${humidity}` + "%"
+        document.getElementById('wind-speed').innerHTML = "Current wind speeds: " + `${windSpeed}` + " MPH"
+        if (windSpeed >= 48 || tempMax >= 99 || tempMin <= 44 || humidity >= 67) {
+            document.getElementById('pof-result').textContent = "Unfortunately, as you can see, today contains inoptimal weather patterns for an atmospheric breach. This occurs frequently and has to be carefully recorded, as accidents relating to weather while launching spacecraft has happened many times in the past."
+            document.getElementById('pass-or-fail').textContent = "🔴 Unacceptable Flight Conditions: Red Light. Abort Mission. 🔴"
+        } else {
+            document.getElementById('pof-result').textContent = "Great news! Today contains optimal weather patters for an atmospheric breach! This occurs less frequently than the alternative, and is always met with a warm welcome by the NASA Launch Team."
+            document.getElementById('pass-or-fail').textContent = "🟢 Acceptable Flight Conditions: Green Light. All Systems Go. 🟢"
+        }
+    })
 
 function pickRandomRover(lengthData) {
     var resultRover = Math.floor(Math.random() * lengthData.length);
@@ -62,23 +71,24 @@ function getNasaApi(event) {
                         document.getElementById('img_counter').textContent = `${xG + 1}` + "/" + `${imageBankG.length}`
                     })
             } else {
-            roverInfo(data);
-            roverInfoTextChanger();
-            window.xG = 0;
-            var imgUrl = data.photos[0].img_src;
-            openImageModal(imgUrl);
-            var totalImages = data.photos.length
-            var imageBankL = []
-            for (i = 0; i < totalImages; i++) {
-                imageBankL.push(data.photos[i].img_src);
+                roverInfo(data);
+                roverInfoTextChanger();
+                window.xG = 0;
+                var imgUrl = data.photos[0].img_src;
+                openImageModal(imgUrl);
+                var totalImages = data.photos.length
+                var imageBankL = []
+                for (i = 0; i < totalImages; i++) {
+                    imageBankL.push(data.photos[i].img_src);
+                    window.imageBankG = imageBankL;
+                }
                 window.imageBankG = imageBankL;
+                document.getElementById('img_counter').textContent = `${xG + 1}` + "/" + `${imageBankG.length}`
             }
-            window.imageBankG = imageBankL;
-            document.getElementById('img_counter').textContent = `${xG + 1}` + "/" + `${imageBankG.length}`
-        }})
+        })
         .catch(function () {
         });
-    }
+}
 
 
 function roverInfo(jsonData) {
@@ -142,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const modal = $trigger.dataset.target;
         const $target = document.getElementById(modal);
         $trigger.addEventListener('click', () => {
-            document.getElementById('img-modal-content').src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png';
+            //   document.getElementById('img-modal-content').src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png';
             selectedDateEl.value = null;
             openModal($target);
         });
