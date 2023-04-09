@@ -303,3 +303,121 @@ text-decoration: underline;
   margin-bottom: auto;
   margin-top: auto;
 }
+
+
+/* Mobile screen styles */
+
+@media only screen and (max-width: 600px) {
+  /* Adjust font sizes and line heights for better mobile readability */
+  * {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Center navbar items vertically and reduce font size */
+  .navbar-item {
+    padding-top: 30px;
+    font-size: 40px;
+  }
+
+  /* Adjust margin and font size of subtitle */
+  .subtitle {
+    margin: 0 10%;
+    font-size: 14px;
+  }
+
+  /* Adjust size and margin of input field */
+  #input-date {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  /* Center submit button */
+  .centerSubmit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+  }
+
+  /* Reduce padding and font size of main description */
+  #main-description {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  /* Adjust margin and font size of footer */
+  .footer {
+    margin-top: 50px;
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  /* Reduce width and margin of body photos */
+  .body-photo {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+
+  /* Adjust padding and font size of card content */
+  .card {
+    width: auto;
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  /* Adjust size and position of prev and next buttons */
+  #prev {
+    left: 10px;
+  }
+
+  #next {
+    right: 10px;
+  }
+
+  /* Hide comment section */
+  #commentSec {
+    display: none;
+  }
+
+  #cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button .is-centered {
+    margin: auto;
+  }
+
+  #gh-link {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .weather-title {
+    margin-top: 20px;
+  }
+
+  .has-text-centered {
+    margin-top: 20px;
+  }
+
+  .modal-card {
+    width: 90%;
+  }
+
+  .modal-card-title {
+    font-size: 1em;
+    width: 20%;
+  }
+
+  #prev{
+    top: 600px;
+  }
+  #next {
+    top: 600px;
+  }
+
+}
