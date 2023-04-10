@@ -108,13 +108,6 @@
           alt="A photo of Mars, the 4th planet in our solar system." />
         <div class="column is-half">
           <div class="media">
-            <figure class="media-left">
-              <p class="image is-4by3">
-                <img
-                  src="https://media2.giphy.com/media/zSsWtkEYZ4K278AwCN/giphy.gif?cid=ecf05e47rkkc99du04v5hk0of3tgmg9i6h64ediuecqaa4r8&rid=giphy.gif&ct=g"
-                  alt="Generic placeholder image" />
-              </p>
-            </figure>
             <div class="media-content has-text-centered">
               <h5 class="mt-0 title-h5">Martian Landscape</h5>
               <p>
@@ -169,7 +162,7 @@
           </div>
         </div>
         <img src="./assets/img/rover-landing.jpg" class="body-photo rover-photo"
-          alt="A photo of the Perseverance taking a 'selfie' in the suraface of Mars." />
+          alt="An artist-rendered photo of the Perseverance landing on Mars" />
       </div>
     </div>
   </section>
@@ -178,7 +171,7 @@
     <div class="card is-small">
       <div class="card-image">
         <figure class="image is-4by3">
-          <img src="./assets/img/perserverance.png" alt="Placeholder image" class="card-photo" />
+          <img src="./assets/img/perserverance.png" alt="An artist-rendered image of the Perseverance rovers on Mars" class="card-photo" />
         </figure>
       </div>
       <div class="card-content">
@@ -219,7 +212,7 @@
     <div class="card is-small">
       <div class="card-image">
         <figure class="image is-4by3">
-          <img src="./assets/img/spirit & opportunity222.jpg" alt="Placeholder image" class="card-photo" />
+          <img src="./assets/img/spirit & opportunity222.jpg" alt="An artist-rendered image of the Spirit and Opportunity rovers on Mars" class="card-photo" />
         </figure>
       </div>
       <div class="card-content">
@@ -259,7 +252,7 @@
     <div class="card is-small">
       <div class="card-image">
         <figure class="image is-4by3">
-          <img src="./assets/img/curiosity.jpg" alt="Placeholder image" class="card-photo" />
+          <img src="./assets/img/curiosity.jpg" alt="An artist-rendered image of the Curiosity rovers on Mars" class="card-photo" />
         </figure>
       </div>
       <div class="card-content">
@@ -298,22 +291,36 @@
     </div>
   </div>
   <!--Weather Section-->
-  <div class="is-centered has-text-centered">
-    <h1 class="title-h5 weather-title">Countdown to Launch</h1>
-  </div>
-  <div class="content is-small has-text-centered weather card is-centered">
-    <img src="./assets/img/liftoff-launch.jpg" alt="">
-    <p>There are a many variables to consider before NASA's billion dollar tool can be safely launched on it's journey
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered body-content">
+        <div class="column is-half">
+          <div class="media">
+            <figure class="media-left">
+              <p class="image is-4by3"></p>
+            </figure>
+            <div class="media-content has-text-centered">
+              <h5 class="mt-0 title-h5">Countdown to Launch</h5>
+              <p>
+                There are a many variables to consider before NASA's billion dollar tool can be safely launched on it's journey
       to Mars, and a lot
       of that relies on the weather. More information on specific launch criteria can be viewed <a
         href="https://www.nasa.gov/centers/kennedy/pdf/531435main_weather-rules-march2011.pdf"
-        id="weather-source">here</a>.</p>
+        id="weather-source">here</a>.>In the list below we will display today's weather forecast at the Cape Canaveral Air Force Base where the rovers
+        are launched from so that we can see just how difficult it can be to
+        achieve a successful take off. If any of these criteria fail the all-systems-go ready check,
+        then any launches scheduled for the day would be postponed. However, if all of the weather checks come back green,
+        then the mission would proceed as planned.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img src="./assets/img/liftoff-launch.jpg" alt="A photograph of the Mars InSight being launched from the Cape Canaveral Air Force Base." class="card-photo body-photo rover-photo liftoff-photo">
+      </div>
+    </div>
+  </section>
+  <div class="content is-normal has-text-centered weather w-card is-centered">
     <h2>Today's Launch Criteria</h2>
-    <p>In the list below we will display today's weather forecast at the Cape Canaveral Air Force Base where the rovers
-      are launched from so that we can see just how difficult it can be to
-      achieve a successful take off. If any of these criteria fail the all-systems-go ready check,
-      then any launches scheduled for the day would be postponed. However, if all of the weather checks come back green,
-      then the mission would proceed as planned.</p>
     <li>Minimum viable temperature to begin fueling: 44.6 °F</li>
     <p id="temp-low"></p>
     <li>Maximum viable temperature to begin fueling: 99.8 °F</li>
