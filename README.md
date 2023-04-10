@@ -17,15 +17,19 @@ To view the GitHub repository you may visit this URL: https://github.com/marshal
 ## Screenshots
 
 A screenshot of our hero image and main functionality
+
 ![image](https://user-images.githubusercontent.com/89714815/230802039-af649380-7cbc-4d5a-8025-85617a713e3a.png)
 
 A photo of our body content describing Mars and the work of the Jet Propulsion Lab
+
 ![image](https://user-images.githubusercontent.com/89714815/230802079-59e096e3-8396-4820-88f7-f4c10836c5f1.png)
 
 A screenshot of the "Meet the Rovers" section which introduces all of the Active Mars rovers
+
 ![image](https://user-images.githubusercontent.com/89714815/230802120-ebde9599-398c-4253-9830-1335b4b9e276.png)
 
 A screenshot of our "Countdown to Launch" section which is found near the bottom of the page
+
 ![image](https://user-images.githubusercontent.com/89714815/230802151-a95de9ad-f236-41de-9d9c-7982fcdc6ceb.png)
 
 ## Credits
