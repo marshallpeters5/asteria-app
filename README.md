@@ -30,7 +30,7 @@ A screenshot of the "Meet the Rovers" section which introduces all of the Active
 
 A screenshot of our "Countdown to Launch" section which is found near the bottom of the page
 
-![image](https://user-images.githubusercontent.com/89714815/230802151-a95de9ad-f236-41de-9d9c-7982fcdc6ceb.png)
+![image](https://user-images.githubusercontent.com/89714815/230805676-fe4becc4-dbba-409d-a86b-b4889f0e0e7d.png)
 
 ## Credits
 
