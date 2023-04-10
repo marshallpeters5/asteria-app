@@ -21,6 +21,9 @@
 #submit{
  background-color: rgba(136, 67, 3, 0.808);
 }
+.control{
+  text-align: center;
+}
 #submit:hover{
   background-color: darkorange;
 }
