@@ -10,31 +10,25 @@
   font-size: 16px;
   border: none;
 }
-
 .custom-button:hover {
   background-color: darkred;
   cursor: pointer;
   color: #fff;
 }
-
 #input-date{
   color: #222222;
 }
-
 #submit{
  background-color: rgba(136, 67, 3, 0.808);
 }
-
 #submit:hover{
   background-color: darkorange;
 }
-
 .hero {
   background-position-y: center;
   background-size: cover;
   background-image: url('https://media.discordapp.net/attachments/1026278051627139114/1091161273158348820/image.png?width=1202&height=676');
 }
-
 .container {
   justify-content: center;
 }
@@ -47,37 +41,31 @@
   color: #fff;
   margin: auto;
 }
-
 .subtitle {
   margin: 0 20% 0 20%;
   font-size: 16px;
   line-height: 1.8;
 }
-
 body {
   background-color: #000000;
 }
-
 .centerButton {
   display: flex;
   justify-content: center;
   margin-top: 20px;
   padding-top: 50px;
 }
-
 .centerSubmit {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
 }
-
 #main-description {
   text-align: left;
   background-color: rgba(0, 0, 0, 0.349) ;
   padding: 10px 20px 10px 20px;
 }
-
 #get-started {
   background-color: rgba(136, 67, 3, 0.808);
   border: 1px solid #222222;
@@ -114,11 +102,9 @@ body {
   flex-direction: column;
   justify-content: flex-end;
 }
-
 .label {
   text-align: left;
 }
-
 #sendMessagebtn {
   background-color: rgba(136, 67, 3, 0.808);
   border: 1px solid #222222;
@@ -129,7 +115,6 @@ body {
 #centerAlignBtn {
   text-align: center;
 }
-
 #commentSec {
   margin-left: 15px;
   padding-bottom: 10px;
@@ -137,24 +122,20 @@ body {
   flex-direction: column;
   width: 20%;
 }
-
 .section:not(:last-child) {
   margin-bottom: 4rem;
 }
-
 .footer {
   margin-top: 100px;
   background-color: #111111;
   color: white; /* To change the text color to white */
   padding: 40px;
 }
-
 #github-btn{
   margin-left: 48%;
   margin-top: 50px;
   background-color: #fff;
 }
-
 #img_counter {
   text-align: center;
 }
@@ -184,29 +165,24 @@ body {
 .title-h5{
   font-size: xx-large;
 }
-
 .modal-card-title {
   font-size: 1.2rem;
 }
-
 @keyframes modulefadein {
   0% {opacity: 0;}
   100% { opacity: 1; }
 }
-
 .modal-card {
   animation-name: modulefadein;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
 }
-
 #img-modal-content {
   animation-name: modulefadein;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
 
 }
-
 .photo-info li {
   display: flex;
   justify-content: center;
