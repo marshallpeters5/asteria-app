@@ -21,6 +21,9 @@
 #submit{
  background-color: rgba(136, 67, 3, 0.808);
 }
+.control{
+  text-align: center;
+}
 #submit:hover{
   background-color: darkorange;
 }
@@ -165,6 +168,9 @@ body {
 .title-h5{
   font-size: xx-large;
 }
+.title-div{
+  margin-bottom: 40px;
+}
 .modal-card-title {
   font-size: 1.2rem;
 }
@@ -295,7 +301,7 @@ text-decoration: underline;
 
 /* Mobile screen styles */
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 600px) {
   /* Adjust font sizes and line heights for better mobile readability */
   * {
     font-size: 14px;
@@ -346,6 +352,7 @@ text-decoration: underline;
     width: 200px;
     height: 200px;
     margin: auto;
+    margin-top: 10px;
   }
 
   /* Adjust padding and font size of card content */
@@ -409,5 +416,4 @@ text-decoration: underline;
   #next {
     top: 600px;
   }
-
 }
